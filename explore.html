@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Explore Salons — HAiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="HAiro home"><span class="brand-mark">h</span><span>HAiro<span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a class="active" href="explore.html">Explore</a><a href="#how-it-works">How it works</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn saved-trigger" id="savedTrigger" aria-label="Show saved salons"><span>♡</span><span class="saved-count" id="savedCount">0</span></button>
+      <button class="avatar-btn" id="profileBtn" aria-label="Open profile menu">G</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="explore.html">Explore salons</a><a href="#how-it-works">How it works</a></nav>
+
+  <main>
+    <section class="explore-hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT GOOD HAIR DAY</p>
+        <h1>Find your kind<br>of <em>salon.</em></h1>
+        <p class="hero-subtitle">Discover trusted salons and barbershops that fit your style, schedule, and budget.</p>
+      </div>
+      <div class="hero-art" aria-label="Salon interior photograph">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85" alt="Warm, modern salon interior">
+        <div class="floating-note"><span class="note-icon">✳</span><div><strong>Your style, your place.</strong><small>Good hair starts here.</small></div></div>
+        <div class="hero-index">01 <span>/</span> DISCOVER</div>
+      </div>
+    </section>
+
+    <section class="search-section" aria-label="Search salons">
+      <div class="search-panel">
+        <label class="search-field"><span class="field-icon">⌕</span><span class="field-content"><span class="field-label">LOOKING FOR</span><input id="searchInput" type="search" placeholder="Salon, barber, or service"></span></label>
+        <span class="search-divider"></span>
+        <label class="search-field location-field"><span class="field-icon">⌖</span><span class="field-content"><span class="field-label">LOCATION</span><input id="locationInput" type="text" placeholder="City or neighborhood"></span></label>
+        <button class="search-button" id="searchButton"><span>Search</span><span>↗</span></button>
+      </div>
+      <div class="quick-searches"><span>Popular:</span><button data-quick="Haircut">Haircut</button><button data-quick="Hair coloring">Hair coloring</button><button data-quick="Treatment">Hair treatment</button><button data-quick="Barbershop">Barbershop</button></div>
+    </section>
+
+    <section class="results-section" id="salons">
+      <div class="results-top">
+        <div><p class="eyebrow">CURATED FOR YOU</p><h2>Explore places <span id="resultsCount">12 places</span></h2><p class="results-description">Find a space where your style feels right.</p></div>
+        <div class="sort-wrap"><label for="sortSelect">Sort by</label><select id="sortSelect"><option value="recommended">Recommended</option><option value="rating">Top rated</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></div>
+      </div>
+
+      <div class="explore-layout">
+        <aside class="filter-sidebar" id="filterSidebar">
+          <div class="filter-heading"><h3>Filters</h3><button id="clearFilters">Clear all</button></div>
+          <div class="filter-group"><h4>Service type</h4>
+            <label class="check-row"><input type="checkbox" name="category" value="Salon"><span class="custom-check"></span>Hair salon</label>
+            <label class="check-row"><input type="checkbox" name="category" value="Barbershop"><span class="custom-check"></span>Barbershop</label>
+            <label class="check-row"><input type="checkbox" name="category" value="Unisex"><span class="custom-check"></span>Unisex studio</label>
+          </div>
+          <div class="filter-group"><h4>Price range</h4><div class="price-labels"><span>Rp 25k</span><strong id="priceValue">Rp 500k</strong></div><input id="priceRange" class="range-input" type="range" min="25" max="500" step="25" value="500"><div class="range-caption"><span>Budget friendly</span><span>Premium</span></div></div>
+          <div class="filter-group"><h4>Minimum rating</h4><div class="rating-options"><button class="rating-option selected" data-rating="0">Any</button><button class="rating-option" data-rating="4">4.0+</button><button class="rating-option" data-rating="4.5">4.5+</button><button class="rating-option" data-rating="4.8">4.8+</button></div></div>
+          <div class="filter-group"><h4>Availability</h4><label class="check-row"><input type="checkbox" id="openNow"><span class="custom-check"></span>Open now</label><label class="check-row"><input type="checkbox" id="weekend"><span class="custom-check"></span>Weekend appointments</label></div>
+          <button class="apply-filters" id="applyFilters">Show places <span>↗</span></button>
+        </aside>
+
+        <div class="results-content">
+          <div class="mobile-filter-row"><button class="mobile-filter-btn" id="mobileFilterBtn">☷ Filters <span id="activeFilterCount">0</span></button><span id="mobileResultsCount">12 places found</span></div>
+          <div class="category-pills" id="categoryPills"><button class="category-pill active" data-category="All">All places <span>12</span></button><button class="category-pill" data-category="Salon">Hair salons</button><button class="category-pill" data-category="Barbershop">Barbershops</button><button class="category-pill" data-category="Unisex">Unisex</button></div>
+          <div class="salon-grid" id="salonGrid"></div>
+          <div class="empty-state" id="emptyState" hidden><span class="empty-icon">⌕</span><h3>No places found</h3><p>Try changing your search or relaxing some filters.</p><button id="emptyClear">Clear filters</button></div>
+          <div class="load-more-wrap"><p>You're looking good already.</p><button class="load-more" id="loadMore">Show more places <span>↓</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-banner" id="how-it-works"><div class="banner-symbol">h.</div><div><p class="eyebrow">YOUR ROUTINE, REIMAGINED</p><h2>Great hair days are<br><em>closer than you think.</em></h2></div><a href="#salons" class="banner-link">Find your salon <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">h</span><span>HAiro<span class="brand-dot">.</span></span></a><p>Feel good in your own style.</p><div class="footer-links"><a href="index.html">Home</a><a href="explore.html">Explore</a><a href="#how-it-works">About HAiro</a></div><span class="copyright">© 2026 HAiro. Made for every kind of you.</span></footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="salonModal" aria-hidden="true"><div class="salon-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div id="modalContent"></div></div></div>
+  <div class="filter-backdrop" id="filterBackdrop"></div>
+
+  <script src="explore.js"></script>
+</body>
+</html>

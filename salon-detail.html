@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Common Room | HAiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="salon-detail.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">h<span>AI</span>ro<span class="dot">.</span></a>
+
+  <nav id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="explore.html" class="active">Explore</a>
+    <a href="#" id="myBookings">My bookings</a>
+  </nav>
+
+  <button class="profile" aria-label="Profile">G</button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+</header>
+
+<main class="container">
+
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="explore.html">Explore</a>
+    <span>/</span>
+    <span>The Common Room</span>
+  </div>
+
+  <!-- PHOTO GALLERY -->
+  <section class="gallery">
+    <img
+      class="main-photo"
+      src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
+      alt="Salon interior">
+
+    <img
+      src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=80"
+      alt="Salon styling area">
+
+    <img
+      src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d2?auto=format&fit=crop&w=700&q=80"
+      alt="Salon chair">
+
+    <button class="gallery-button" id="viewPhotos">
+      View all photos ↗
+    </button>
+  </section>
+
+  <!-- SALON INFORMATION -->
+  <section class="salon-heading">
+    <div>
+      <span class="eyebrow">COMMUNITY FAVOURITE</span>
+      <h1>The Common Room</h1>
+      <p class="location">⌖ &nbsp; Kemang, South Jakarta</p>
+
+      <div class="rating">
+        <span>★</span>
+        <strong>4.9</strong>
+        <span class="muted">128 reviews</span>
+        <span class="open-status">● Open today · 10 AM–8 PM</span>
+      </div>
+    </div>
+
+    <button id="favoriteBtn" class="favorite" aria-label="Add to favourites">
+      ♡
+    </button>
+  </section>
+
+  <div class="content-grid">
+
+    <div class="main-content">
+
+      <!-- ABOUT -->
+      <section class="section about">
+        <span class="eyebrow">THE SPACE</span>
+        <h2>Good hair, good energy.</h2>
+        <p>
+          A thoughtful neighbourhood studio with a relaxed atmosphere,
+          considered cuts, and stylists who take the time to understand
+          your look. Whether you're here for a fresh cut or a small change,
+          we want you to leave feeling more like yourself.
+        </p>
+
+        <div class="amenities">
+          <span>✳ Personal consultation</span>
+          <span>✳ All genders welcome</span>
+          <span>✳ Complimentary drinks</span>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">MENU & PRICING</span>
+            <h2>Services to suit you.</h2>
+          </div>
+          <span class="muted small">Prices in IDR</span>
+        </div>
+
+        <div class="service-list">
+
+          <article class="service">
+            <div class="service-icon">✂</div>
+            <div class="service-info">
+              <h3>Signature Haircut</h3>
+              <p>Consultation, wash, cut, and finish.</p>
+              <span>45–60 min</span>
+            </div>
+            <div class="service-action">
+              <strong>Rp 85.000</strong>
+              <button class="choose-btn"
+                data-service="Signature Haircut"
+                data-price="85000">Choose</button>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">◌</div>
+            <div class="service-info">
+              <h3>Wash & Styling</h3>
+              <p>A fresh wash and effortless styling.</p>
+              <span>30 min</span>
+            </div>
+            <div class="service-action">
+              <strong>Rp 60.000</strong>
+              <button class="choose-btn"
+                data-service="Wash & Styling"
+                data-price="60000">Choose</button>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">✧</div>
+            <div class="service-info">
+              <h3>Hair Treatment</h3>
+              <p>A nourishing treatment for softer hair.</p>
+              <span>45 min</span>
+            </div>
+            <div class="service-action">
+              <strong>Rp 120.000</strong>
+              <button class="choose-btn"
+                data-service="Hair Treatment"
+                data-price="120000">Choose</button>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">⌁</div>
+            <div class="service-info">
+              <h3>Cut & Treatment</h3>
+              <p>A signature cut with extra care.</p>
+              <span>75 min</span>
+            </div>
+            <div class="service-action">
+              <strong>Rp 175.000</strong>
+              <button class="choose-btn"
+                data-service="Cut & Treatment"
+                data-price="175000">Choose</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- STYLISTS -->
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">MEET THE TEAM</span>
+            <h2>Your hair, their craft.</h2>
+          </div>
+        </div>
+
+        <div class="stylist-grid">
+          <article class="stylist">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Alex">
+            <h3>Alex Pratama</h3>
+            <p>Senior stylist · Cuts & texture</p>
+            <span>★ 4.9 · 6 years experience</span>
+          </article>
+
+          <article class="stylist">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Maya">
+            <h3>Maya Putri</h3>
+            <p>Stylist · Colour & styling</p>
+            <span>★ 4.8 · 4 years experience</span>
+          </article>
+
+          <article class="stylist">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Rio">
+            <h3>Rio Mahendra</h3>
+            <p>Barber · Modern classics</p>
+            <span>★ 4.9 · 5 years experience</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- REVIEW -->
+      <section class="section">
+        <span class="eyebrow">KIND WORDS</span>
+        <h2>People leave feeling good.</h2>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>
+            "Exactly the kind of place I was looking for. They listened
+            to what I wanted and made the whole appointment feel easy."
+          </p>
+          <span>— Nadine A. · 2 weeks ago</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- BOOKING SIDEBAR -->
+    <aside class="booking-card">
+      <span class="eyebrow">MAKE IT YOURS</span>
+      <h2>Your next good hair day.</h2>
+      <p class="location">⌖ &nbsp; Kemang, South Jakarta</p>
+
+      <div class="booking-row">
+        <span>Starting from</span>
+        <strong>Rp 60.000</strong>
+      </div>
+
+      <div class="booking-row">
+        <span>Duration</span>
+        <strong>30–75 min</strong>
+      </div>
+
+      <div class="booking-row">
+        <span>Availability</span>
+        <strong class="green">10 AM–8 PM</strong>
+      </div>
+
+      <button class="primary-button" id="bookNow">
+        Book an appointment <span>↗</span>
+      </button>
+
+      <p class="fine-print">No payment required in this demo.</p>
+
+      <div class="sidebar-note">
+        ♡ &nbsp; Your next self-care moment starts here.
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <a href="index.html" class="logo">h<span>AI</span>ro<span class="dot">.</span></a>
+  <p>Feel good in your own style.</p>
+  <span>© 2026 HAiro</span>
+</footer>
+
+<!-- PHOTO LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button id="closePhotos" aria-label="Close photos">×</button>
+  <img id="lightboxImage" src="" alt="Salon photo">
+  <div class="lightbox-controls">
+    <button id="previousPhoto">←</button>
+    <span id="photoCounter">1 / 3</span>
+    <button id="nextPhoto">→</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="salon-detail.js"></script>
+</body>
+</html>
